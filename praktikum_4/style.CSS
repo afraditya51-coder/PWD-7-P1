@@ -1,0 +1,106 @@
+/* Reset dasar & styling halaman */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Membuat animasi perpindahan halaman menjadi halus */
+}
+
+body {
+    font-family: Georgia, serif;
+    line-height: 1.8;
+    background-color: #fcf8f2;
+    color: #2c221e;
+    /* Ketentuan 1: Kedalaman scroll > 2000px */
+    min-height: 2400px; 
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: #3b2a1a;
+    color: #f4d9a8;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.content-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.content-section h2 {
+    color: #5c3a21;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.content-section p {
+    margin-bottom: 20px;
+}
+
+.spacer {
+    margin-top: 1000px; /* Mendorong konten ke bawah agar kedalaman scroll > 2000px */
+    border-top: 2px dashed #e3a857;
+    padding-top: 30px;
+}
+
+/* ==========================================
+   KETENTUAN TOMBOL KEMBALI KE ATAS (BACK TO TOP)
+   ========================================== */
+.ke-atas { 
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    width: 50px;  /* Ukuran tombol (px) */
+    height: 50px; /* Ukuran tombol (px) */
+    background-color: #5c3a21; 
+    color: #fff;
+    border: none; 
+    border-radius: 50%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-decoration: none; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000; 
+    
+    /* Disembunyikan secara default sebelum di-scroll */
+    opacity: 0; 
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Kelas saat diaktifkan oleh JavaScript (setelah scroll > 500px) */
+.ke-atas.tampil { 
+    opacity: 0.4; /* Ketentuan 3: Opasitas awal 40% (0.4) agar tidak mengganggu konten */
+    visibility: visible; 
+    transform: translateY(0); 
+}
+
+/* Ketentuan 3: Ketika hover, opasitas menjadi 100% (1) */
+.ke-atas.tampil:hover { 
+    opacity: 1; 
+    background-color: #e3a857; 
+    color: #3b2a1a;
+}
+
+.ke-atas svg { 
+    width: 22px; 
+    height: 22px; 
+    stroke: currentColor; 
+}
