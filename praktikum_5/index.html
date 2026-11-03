@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>G.A.Z Store</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>G.A.Z STORE</h1>
+  <button id="toggle-keranjang">Buka/Tutup Keranjang</button>
+</header>
+
+<div class="wrap">
+  <main>
+    <div id="daftar-produk"></div>
+  </main>
+
+  <aside>
+    <div class="judul-keranjang"><h2>Keranjang</h2></div>
+    <div id="panel-keranjang">
+      <p>Jumlah item: <span id="jumlah-item">0</span></p>
+      <ul id="isi-keranjang"></ul>
+      <p class="total">Total: <span id="total-harga">Rp 0</span></p>
+      <div class="aksi">
+        <button id="checkout">Checkout</button>
+        <button id="kosongkan">Kosongkan Keranjang</button>
+      </div>
+      <div id="ringkasan"></div>
+    </div>
+  </aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

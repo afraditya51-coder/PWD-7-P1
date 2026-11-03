@@ -1,0 +1,24 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: #222; background: #fff; line-height: 1.5; }
+header { max-width: 1000px; margin: auto; padding: 20px; display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+h1 { margin: 0; font-size: 1.5rem; }
+button { padding: 8px 12px; border: 1px solid #222; background: #fff; color: #222; font: inherit; cursor: pointer; }
+button:hover { background: #eee; }
+.wrap { max-width: 1000px; margin: auto; padding: 0 20px 30px; display: grid; grid-template-columns: 1fr 300px; gap: 20px; align-items: start; }
+@media (max-width: 800px) { .wrap { grid-template-columns: 1fr; } }
+#cari { width: 100%; padding: 8px; border: 1px solid #222; margin-bottom: 14px; font: inherit; }
+#daftar-produk { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+.produk { border: 1px solid #ccc; padding: 12px; display: flex; flex-direction: column; gap: 4px; }
+.produk h3 { margin: 0; font-size: 1rem; }
+.harga { font-weight: bold; }
+.stok { font-size: .9rem; color: #555; }
+aside { border: 1px solid #ccc; padding: 14px; }
+aside h2 { margin: 0 0 10px; font-size: 1.1rem; }
+#isi-keranjang { list-style: none; padding: 0; margin: 0 0 10px; }
+#isi-keranjang li { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid #ddd; }
+.kosong { color: #777; }
+.total { font-weight: bold; }
+.aksi { display: flex; gap: 8px; flex-wrap: wrap; }
+#ringkasan { display: none; margin-top: 12px; padding: 10px; border: 1px solid #222; }
+#ringkasan h3 { margin: 0 0 6px; }
+#ringkasan ul { margin: 6px 0; padding-left: 18px; }
